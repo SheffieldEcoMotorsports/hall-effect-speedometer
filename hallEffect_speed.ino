@@ -9,7 +9,7 @@ float spd = 0;
 void setup() {
   Serial.begin(115200);
   pinMode(HALL, INPUT);
-  attachInterrupt(1, hall_ISR, FALLING); //1 is pin 3
+  attachInterrupt(HALL-2, hall_ISR, FALLING); //first number is 0 for pin 2 and 1 for pin 3
 }
 
 void loop() {
